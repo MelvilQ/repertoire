@@ -1,0 +1,20 @@
+# Drache
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6
+
+# Delayed Alapin
+1. e4 c5 2. Nf3 d6 3. c3 Nf6 4. Be2 g6
+1. e4 c5 2. Nf3 d6 3. c3 Nf6 4. h3 Nc6
+1. e4 c5 2. Nf3 d6 3. c3 Nf6 4. Bd3 Nc6
+
+# Sizilianisches Läuferspiel
+1. e4 c5 2. Nf3 d6 3. Bc4 Nf6 4. d3 Nc6 5. c3 a6
+
+# Chekhover Variante
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Qxd4 Nf6 5. Nc3 Nc6 6. Bb5 Bd7 7. Bxc6 Bxc6 8. Bg5 e6 9. O-O-O Be7 10. Rhe1 O-O
+
+# Modern Benoni, Taimanov Variante
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. Bb5+ Nfd7
+
+# Modern Benoni, Nf3
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. Bf4 a6 8. a4 Bg7 9. h3 O-O 10. e3 Qe7
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. Bf4 Bg7 8. Qa4+ Bd7 9. Qb3 Qc7 10. e4 O-O

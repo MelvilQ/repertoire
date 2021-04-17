@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Repertoire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="repertoire.css">
+<script src="chess.min.js"></script>
+<script src="chessground.min.js"></script>
+<script src="axios.min.js"></script>
+</head>
+<body>
+<div class="blue cburnett"><div id="board" class="cg-wrap"></div></div>
+<script>
+
+class Repertoire {
+  board = new Chessground(document.getElementById('board'));
+  game = new Chess();
+
+  playerColor = 'white';
+
+  repertoire = [];
+  lineNames = new Map();
+  currentLine = [];
+  moveIndex = 0;
+
+  get turnColor() {
+    return (this.game.turn() === 'w') ? 'white' : 'black'; 
+  }
+
+  get possibleMoves() {
+	const dests = new Map();
+    this.game.SQUARES.forEach(s => {
+      const ms = this.game.moves({square: s, verbose: true});
+      if (ms.length) dests.set(s, ms.map(m => m.to));
+    });
+    return dests;
+  }
+
+  async init() {
+    this.whiteRepertoire = await this.loadRepertoire(this.playerColor);
+    this.board.set({
+      movable: {color: this.turnColor, free: false, dests: this.possibleMoves}, 
+      draggable: {showGhost: true}
+    });
+  }
+
+  async loadRepertoire(color) {
+    const response = await axios.get(color + '.txt', {responseType: 'text'});
+    const lines = response.data.split('\n').map(line => line.trim()).filter(line => !!line);
+    let currentLineName = '';
+    for (const line of lines) {
+      if (line.startsWith('#')) {
+        currentLineName = line.replace('# ', '');
+      } else {
+        repertoire.push(line);
+        lineNames.set(line, currentLineName);
+      }
+    }
+  }
+
+  pickRandomLine() {
+    return this.repertoire[Math.floor(Math.random() * this.repertoire.length)]
+  }
+}
+const repertoire = new Repertoire();
+repertoire.init();
+
+</script>
+</body>
+</html>
