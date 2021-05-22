@@ -17,13 +17,33 @@ class Repertoire {
 
   playerColor = 'white';
 
-  repertoire = [];
-  lineNames = new Map();
-  currentLine = [];
-  moveIndex = 0;
+  whiteRepertoire = [];
+  blackRepertoire = [];
+  currentLine = '';
+  currentMove = 0;
 
   get turnColor() {
     return (this.game.turn() === 'w') ? 'white' : 'black'; 
+  }
+
+  get itIsPlayersTurn() {
+    return this.turnColor === this.playerColor;
+  }
+
+  get repertoire() {
+    return this.playerColor === 'white' ? this.whiteRepertoire : this.blackRepertoire;
+  }
+
+  get movesOfCurrentLine() {
+    return this.currentLine.split(' ').filter(part => !part.endsWith('.'));
+  }
+
+  get nextMoveToPlay() {
+    return this.movesOfCurrentLine[this.currentMove];
+  }
+
+  get isLineFinished() {
+    return this.currentMove >= this.movesOfCurrentLine.length;
   }
 
   get possibleMoves() {
@@ -36,30 +56,94 @@ class Repertoire {
   }
 
   async init() {
-    this.whiteRepertoire = await this.loadRepertoire(this.playerColor);
-    this.board.set({
-      movable: {color: this.turnColor, free: false, dests: this.possibleMoves}, 
-      draggable: {showGhost: true}
-    });
+    [this.whiteRepertoire, this.blackRepertoire] = await Promise.all([
+      this.loadRepertoire('white'),
+      this.loadRepertoire('black')
+    ]);
+    this.startLine();
   }
-
+  
   async loadRepertoire(color) {
     const response = await axios.get(color + '.txt', {responseType: 'text'});
-    const lines = response.data.split('\n').map(line => line.trim()).filter(line => !!line);
-    let currentLineName = '';
-    for (const line of lines) {
-      if (line.startsWith('#')) {
-        currentLineName = line.replace('# ', '');
-      } else {
-        repertoire.push(line);
-        lineNames.set(line, currentLineName);
-      }
+    const lines = response.data.split('\n').map(line => line.trim()).filter(line => !!line && !line.startsWith('#'));
+    return lines;
+  }
+
+  startLine() {
+    this.playerColor = this.pickRandomPlayer();
+    this.game = new Chess();
+    this.board.set({
+      fen: this.game.fen(),
+      turnColor: this.turnColor,
+      orientation: this.playerColor,
+      premovable: {enabled: false},
+    });
+
+    this.currentLine = this.pickRandomLine();
+    this.currentMove = 0;
+
+    this.doNextMove();
+  }
+
+  pickRandomPlayer() {
+    return 'black';
+    return ['white', 'black'][Math.round(Math.random())];
+  }
+  
+  pickRandomLine() {
+    return this.repertoire[Math.floor(Math.random() * this.repertoire.length)];
+  }
+
+  doNextMove() {
+    if (this.itIsPlayersTurn) {
+      this.preparePlayersTurn();
+    } else {
+      this.performOpponentTurn();
+      this.finishMove();
     }
   }
 
-  pickRandomLine() {
-    return this.repertoire[Math.floor(Math.random() * this.repertoire.length)]
+  preparePlayersTurn() {
+    this.board.set({
+      turnColor: this.turnColor,
+      movable: {color: this.turnColor, free: false, dests: this.possibleMoves, events: {after: (from, to) => this.checkPlayerMove(from, to)}}, 
+      draggable: {showGhost: true},
+    });
   }
+
+  checkPlayerMove(from, to) {
+    const moveToPlay = this.nextMoveToPlay;
+    const move = this.game.move({from, to});
+    const movePlayed = move.san;
+    if (movePlayed === moveToPlay) {
+      console.log('correct');
+      this.finishMove();
+    } else {
+      console.log('wrong');
+      this.game.undo();
+      this.board.set({fen: this.game.fen()});
+      this.preparePlayersTurn();
+    }
+  }
+
+  performOpponentTurn() {
+    const move = this.game.move(this.nextMoveToPlay);
+    this.board.set({
+      fen: this.game.fen(),
+      lastMove: [move.from, move.to],
+    })
+  }
+
+  finishMove() {
+    this.currentMove += 1;
+    if (this.isLineFinished) {
+      alert('Congrats!');
+      this.startLine();
+    } else {
+      setTimeout(() => this.doNextMove());
+    }
+  }
+  
 }
 const repertoire = new Repertoire();
 repertoire.init();
