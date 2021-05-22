@@ -1,5 +1,49 @@
-# Drache
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6
+# Drache, Hauptvariante Bc4
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rc8 11. Bb3 Ne5
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. h4 Rc8 11. Bb3 h5
+
+# Drache, Hauptvariante 0-0-0
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. exd5 Nxd5 11. Nxc6 bxc6 12. Bd4 Nxc3 13. Qxc3 Bh6+ 14. Be3 Bxe3+ 15. Qxe3 Qb6
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Nxc6 bxc6 11. exd5 cxd5 12. Nxd5 Nxd5 13. Qxd5 Qc7 14. Qc5 Qb7 15. Qa3 Bf5 16. Bd3 Rab8 17. b3 Qc6 18. Bxf5 Qc3 19. Qc5 Qb2+ 20. Kd2 gxf5
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Nxc6 bxc6 11. exd5 cxd5 12. Nxd5 Nxd5 13. Qxd5 Qc7 14. Qc5 Qb7 15. b3 Bf5 16. Bd3 Rac8 17. Qa5 Rc3 18. Bxf5 Rxe3 19. Be4 Qb8 20. g3 Re2
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Nxc6 bxc6 11. exd5 Nxd5 12. Nxd5 cxd5 13. Qxd5 Qc7 14. Qxa8 Bf5 15. Qxf8+ Kxf8 16. Bd3 Qe5 17. Bxf5 Qxe3+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Nxc6 bxc6 11. exd5 Nxd5 12. Nxd5 cxd5 13. Qxd5 Qc7 14. Qxa8 Bf5 15. Qxf8+ Kxf8 16. Bd3 Qe5 17. Kd2 Bxd3 18. Kxd3 Qxb2
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Nxc6 bxc6 11. exd5 Nxd5 12. Nxd5 cxd5 13. Qxd5 Qc7 14. Qxa8 Bf5 15. Qxf8+ Kxf8 16. Rd2 Qb8 17. Bb5 Bxb2+ 18. Kxb2 Qxb5+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. h4 dxe4 11. h5 exf3 12. hxg6 hxg6
+
+# Drache, g4
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. g4 Be6 10. Nxe6 fxe6 11. O-O-O Ne5 12. Be2 Qc8 13. h4 Nc4 14. Bxc4 Qxc4 15. h5 Nd7 16. hxg6 hxg6 17. f4 Bxc3 18. bxc3 Qxa2 19. Qh2 Kf7 20. Qh7+ Ke8
+
+# Drache, Qe1
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Qe1 e5 11. Nxc6 bxc6 12. exd5 Nxd5 13. Bc4 Be6
+
+# Klassischer Drache, Be2
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 Bg7 7. O-O O-O 8. Re1 Nc6 9. Nb3 Be6 10. Bf1 d5 11. Nc5 dxe4
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 Bg7 7. O-O O-O 8. Be3 Nc6 9. f3 d5
+
+# Klassischer Drache, Bg5
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Bg5 Bg7 7. Bb5+ Bd7 8. Qe2 a6 9. Bxd7+ Nbxd7 10. O-O-O O-O 11. f4 Rc8
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Bg5 Bg7 7. Be2 Nc6 8. Nb3 O-O 9. O-O a6 10. f4 b5 11. Bf3 b4
+
+# Drache mit g3
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. g3 Nc6 7. Nde2 Bg7 8. Bg2 O-O 9. O-O Bd7 10. h3 Rc8
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be2 Bg7 7. O-O O-O 8. Be3 Nc6 9. Nb3 Be6 10. f4 Rc8
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. g3 Nc6 7. Bg2 Nxd4 8. Qxd4 Bg7 9. O-O O-O
+
+# Geschlossener Sizilianer
+1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7 5. d3 d6
+
+# Grand Prix
+1. e4 c5 2. Nc3 Nc6 3. f4 g6 4. Nf3 Bg7 5. Bb5 Nd4 6. O-O Nxb5 7. Nxb5 d5
+
+# Alapin
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. d4 cxd4 5. Nf3 Nc6 6. cxd4 d6 7. Bc4 Nb6 8. Bb5 dxe5 9. Nxe5 Bd7 10. Nxd7 Qxd7
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. Nf3 d6 5. d4 cxd4 6. cxd4 Nc6 7. Bc4 Nb6 8. Bb5 dxe5 9. Nxe5 Bd7 10. Nxd7 Qxd7
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. Bc4 e6
+
+# Moskauer Variante
+1. e4 c5 2. Nf3 d6 3. Bb5+ Nd7 4. d4 cxd4 5. Qxd4 a6 6. Bxd7+ Bxd7
+1. e4 c5 2. Nf3 d6 3. Bb5+ Nd7 4. O-O a6 5. Bd3 Ngf6 6. Re1 g6
 
 # Delayed Alapin
 1. e4 c5 2. Nf3 d6 3. c3 Nf6 4. Be2 g6
@@ -8,13 +52,82 @@
 
 # Sizilianisches Läuferspiel
 1. e4 c5 2. Nf3 d6 3. Bc4 Nf6 4. d3 Nc6 5. c3 a6
+1. e4 c5 2. Nf3 d6 3. Bc4 Nf6 4. e5 dxe5 5. Nxe5 e6 6. O-O Qc7
+
+# Moderner Sizilianer, Kackvariante b3
+1. e4 c5 2. Nf3 d6 3. b3 g6 4. Bb2 Nf6 5. Bb5+ Nbd7 6. O-O Bg7
+
+# Moderner Sizilianer, Kackvariante Nc3
+1. e4 c5 2. Nf3 d6 3. Nc3 Nf6 4. d4 cxd4 5. Nxd4 g6
 
 # Chekhover Variante
 1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Qxd4 Nf6 5. Nc3 Nc6 6. Bb5 Bd7 7. Bxc6 Bxc6 8. Bg5 e6 9. O-O-O Be7 10. Rhe1 O-O
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Qxd4 Nf6 5. Bb5+ Bd7 6. Bxd7+ Nbxd7 7. O-O g6 8. c4 Bg7 9. Nc3 O-O 10. Bd2 a6
+
+# Moderner Sizilianer, Kackvariante Bd3
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Bd3 Nc6
+
+# Morra Gambit
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 e6 5. Nf3 a6 6. Bc4 b5 7. Bb3 Bb7 8. O-O Nc6 9. Re1 Bc5 10. Bg5 Nge7
+
+# Bowdler Attack
+1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. Bb5+ Bd7 5. Be2 Ng8
+1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. Bb5+ Bd7 5. exf6 Bxb5 6. fxe7 Bxe7
+1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. exf6 dxc4 5. fxe7 Bxe7 6. Na3 Qd5
+1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. exd6 exd6
+1. e4 c5 2. Bc4 Nf6 3. Nc3 a6 4. a4 e6 5. d3 d5 6. exd5 exd5 7. Bb3 Nc6
+1. e4 c5 2. Bc4 Nf6 3. d3 e6 4. Nc3 d5 5. exd5 exd5 6. Bb3 Be7 7. Bg5 O-O
+
+# Snyder Variante
+1. e4 c5 2. b3 g6 3. Bb2 Nf6 4. e5 Nd5
+1. e4 c5 2. b3 g6 3. Bb2 Nf6 4. Qf3 Nc6 5. e5 Nh5 6. Qe3 b6
 
 # Modern Benoni, Taimanov Variante
 1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. f4 Bg7 8. Bb5+ Nfd7
 
+# Modern Benoni, klassische Variante
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Nf3 a6 8. a4 Bg4 9. Be2 Bg7 10. O-O O-O 11. Bf4 Bxf3 12. Bxf3 Qc7
+
+# Modern Benoni, Bb5+
+1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. e4 g6 7. Bb5+ Nbd7 8. a4 Bg7 9. Nf3 O-O 10. O-O a6
+
 # Modern Benoni, Nf3
 1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. Bf4 a6 8. a4 Bg7 9. h3 O-O 10. e3 Qe7
 1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cxd5 d6 6. Nf3 g6 7. Bf4 Bg7 8. Qa4+ Bd7 9. Qb3 Qc7 10. e4 O-O
+
+# Benoni, cxd5
+1. d4 Nf6 2. c4 c5 3. dxc5 e6 4. Nf3 Bxc5
+
+# Benoni, e3
+1. d4 Nf6 2. c4 c5 3. e3 cxd4 4. exd4 d5 5. Nc3 e6 6. Nf3 Bb4
+1. d4 Nf6 2. c4 c5 3. e3 cxd4 4. exd4 d5 5. cxd5 Nxd5 6. Nc3 e6 7. Nf3 Nxc3 8. bxc3 Qc7
+
+# London System
+1. d4 Nf6 2. Bf4 c5 3. e3 g6 4. c3 Bg7 5. Nf3 Qb6 6. Qb3 d6 7. Nbd2 O-O
+1. d4 Nf6 2. Bf4 c5 3. d5 b5 4. a4 b4
+1. d4 Nf6 2. Bf4 c5 3. dxc5 Na6 4. Qd4 Qa5+ 5. Nc3 Nxc5 6. Bd2 Qb6
+1. d4 Nf6 2. Bf4 c5 3. dxc5 Na6 4. Qd4 Qa5+ 5. c3 Qxc5
+1. d4 Nf6 2. Bf4 c5 3. c3 Qb6
+
+# Weressow
+1. d4 Nf6 2. Nc3 d5 3. Bg5 c5 4. e4 Nxe4 5. Nxe4 dxe4 6. d5 g6
+
+# Jobava London
+1. d4 Nf6 2. Nc3 d5 3. Bf4 c5 4. e3 cxd4 5. exd4 a6 6. Nf3 Nc6 7. Ne5 e6 8. Nxc6 bxc6 9. Na4 Bd6 10. Bxd6 Qxd6
+
+# Englisch, Great Snake
+1. c4 g6 2. Nc3 Bg7 3. g3 e5 4. Bg2 d6 5. d3 f5 6. e4 Nf6 7. Nge2 O-O 8. O-O c6 9. exf5 Bxf5
+
+# Zuckertort, g3
+1. Nf3 g6 2. g3 Bg7 3. Bg2 e5 4. d3 d5 5. O-O Nc6 6. e4 dxe4 7. dxe4 Qxd1 8. Rxd1 Bg4
+1. Nf3 g6 2. g3 Bg7 3. Bg2 e5 4. O-O d5 5. d3 Nc6
+1. Nf3 g6 2. g3 Bg7 3. Bg2 e5 4. O-O d5 5. c4 c6
+
+# Zuckertort, Königsindisch
+1. Nf3 g6 2. d4 Bg7 3. c4 d6 4. Nc3 Nf6 5. e4 O-O 6. Be2 e5 7. O-O Nc6 8. d5 Ne7
+
+# Zuckertort, h4
+1. Nf3 g6 2. h4 Nf6 3. d4 Bg7 4. c4 c5
+
+# Orang-Utan
+1. b4 e5 2. Bb2 Bxb4 3. Bxe5 Nf6 4. Nf3 O-O 5. e3 d5 6. c4 Re8 7. Bb2 Bf5
