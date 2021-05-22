@@ -81,6 +81,9 @@ cg-board square.last-move {
   will-change: transform;
   background-color: rgba(155, 199, 0, 0.41);
 }
+#highlight-color.red cg-board square.last-move {
+  background-color: rgba(231, 0, 0, 0.41);
+}
 cg-board square.selected {
   background-color: rgba(20, 85, 30, 0.5);
 }

@@ -8,7 +8,7 @@
 <script src="axios.min.js"></script>
 </head>
 <body>
-<div class="blue cburnett"><div id="board" class="cg-wrap"></div></div>
+<div id="highlight-color"><div class="blue cburnett"><div id="board" class="cg-wrap"></div></div></div>
 <script>
 
 class Repertoire {
@@ -21,6 +21,7 @@ class Repertoire {
   blackRepertoire = [];
   currentLine = '';
   currentMove = 0;
+  allMovesCorrect = true;
 
   get turnColor() {
     return (this.game.turn() === 'w') ? 'white' : 'black'; 
@@ -70,8 +71,13 @@ class Repertoire {
   }
 
   startLine() {
-    this.playerColor = this.pickRandomPlayer();
     this.game = new Chess();
+
+    if (!this.currentLine || this.allMovesCorrect) {
+      this.playerColor = this.pickRandomPlayer();
+      this.currentLine = this.pickRandomLine();
+    }
+    
     this.board.set({
       fen: this.game.fen(),
       turnColor: this.turnColor,
@@ -79,19 +85,19 @@ class Repertoire {
       premovable: {enabled: false},
     });
 
-    this.currentLine = this.pickRandomLine();
     this.currentMove = 0;
+    this.allMovesCorrect = true;
 
     this.doNextMove();
   }
 
   pickRandomPlayer() {
-    return 'black';
     return ['white', 'black'][Math.round(Math.random())];
   }
   
   pickRandomLine() {
-    return this.repertoire[Math.floor(Math.random() * this.repertoire.length)];
+    const lines = this.repertoire.filter(line => line.startsWith(this.game.pgn()));
+    return lines[Math.floor(Math.random() * lines.length)];
   }
 
   doNextMove() {
@@ -118,12 +124,22 @@ class Repertoire {
     if (movePlayed === moveToPlay) {
       console.log('correct');
       this.finishMove();
+    } else if (this.repertoire.some(line => line.startsWith(this.game.pgn()))) {
+      console.log('correct (switched line)');
+      this.currentLine = this.pickRandomLine();
+      this.finishMove();
     } else {
-      console.log('wrong');
+      console.log(`wrong (should be: ${moveToPlay})`);
+      this.allMovesCorrect = false;
+      this.setLastMoveHighlightColor(false);
       this.game.undo();
       this.board.set({fen: this.game.fen()});
       this.preparePlayersTurn();
     }
+  }
+
+  setLastMoveHighlightColor(wasCorrect) {
+    document.getElementById('highlight-color').className = wasCorrect ? '' : 'red';
   }
 
   performOpponentTurn() {
@@ -135,13 +151,18 @@ class Repertoire {
   }
 
   finishMove() {
+    this.setLastMoveHighlightColor(true);
     this.currentMove += 1;
     if (this.isLineFinished) {
-      alert('Congrats!');
-      this.startLine();
+      setTimeout(() => this.finishLine(), 500);
     } else {
       setTimeout(() => this.doNextMove());
     }
+  }
+
+  finishLine() {
+    alert('Congrats!');
+    this.startLine();
   }
   
 }

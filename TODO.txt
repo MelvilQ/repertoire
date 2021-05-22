@@ -1,6 +1,1 @@
-- Gameplay implementieren
-- Rote Markierung bei falschen Zügen
-- Radio-Buttons, um die Farbe zu wechseln (in diesem Fall auch neues Spiel starten, Farbe in Local Storage merken)
-- Parsen verbessern (Fehler anzeigen, wenn z.B. irgendwo zwei Leerzeichen sind etc.)
-- Repertoires aufbauen
 - Spaced Repetition Algorithmus einbauen (der auch mit Änderungen und hinzugefügten Varianten klarkommt)
