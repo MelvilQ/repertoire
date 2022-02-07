@@ -70,6 +70,11 @@
 # Morra Gambit
 1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 e6 5. Nf3 a6 6. Bc4 b5 7. Bb3 Bb7 8. O-O Nc6 9. Re1 Bc5 10. Bg5 Nge7
 
+# Lasker-Dunne-Angriff
+1. e4 c5 2. g3 d5 3. exd5 Qxd5 4. Nf3 Bg4 5. Bg2 Qe6+ 6. Kf1 Nc6 7. h3 Bh5 8. d3 Qd7
+1. e4 c5 2. g3 d5 3. exd5 Qxd5 4. Qf3 Qxf3 5. Nxf3 Nc6
+1. e4 c5 2. g3 d5 3. d3 dxe4 4. dxe4 Qxd1+ 5. Kxd1 Nf6 6. f3 e6 7. Be3 Be7
+
 # Bowdler Attack
 1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. Bb5+ Bd7 5. Be2 Ng8
 1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. Bb5+ Bd7 5. exf6 Bxb5 6. fxe7 Bxe7
@@ -77,6 +82,10 @@
 1. e4 c5 2. Bc4 Nf6 3. e5 d5 4. exd6 exd6
 1. e4 c5 2. Bc4 Nf6 3. Nc3 a6 4. a4 e6 5. d3 d5 6. exd5 exd5 7. Bb3 Nc6
 1. e4 c5 2. Bc4 Nf6 3. d3 e6 4. Nc3 d5 5. exd5 exd5 6. Bb3 Be7 7. Bg5 O-O
+
+# McDonnell Attack, Tal Gambit
+1. e4 c5 2. f4 d5 3. exd5 Nf6 4. Bb5+ Bd7 5. Bxd7+ Qxd7 6. c4 e6 7. Qe2 Bd6
+1. e4 c5 2. f4 d5 3. exd5 Nf6 4. Nf3 Nxd5 5. Nc3 e6 6. Bb5+ Bd7 7. Bxd7+ Nxd7 8. f5 Qf6
 
 # Snyder Variante
 1. e4 c5 2. b3 g6 3. Bb2 Nf6 4. e5 Nd5
@@ -110,6 +119,7 @@
 1. d4 Nf6 2. Bf4 c5 3. d5 b5 4. a4 b4
 1. d4 Nf6 2. Bf4 c5 3. dxc5 Na6 4. Qd4 Qa5+ 5. Nc3 Nxc5 6. Bd2 Qb6
 1. d4 Nf6 2. Bf4 c5 3. dxc5 Na6 4. Qd4 Qa5+ 5. c3 Qxc5
+1. d4 Nf6 2. Bf4 c5 3. dxc5 Na6 4. Be3 e6 5. Nf3 Bxc5
 1. d4 Nf6 2. Bf4 c5 3. c3 Qb6
 
 # Weressow
