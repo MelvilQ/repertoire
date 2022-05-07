@@ -15,10 +15,15 @@ class Repertoire {
   board = new Chessground(document.getElementById('board'));
   game = new Chess();
 
-  playerColor = 'white';
+  repertoireNames = [
+    'white-ruy-lopez',
+    // 'white-rossolimo',
+    // 'white-ponziani',
+    // 'black-london'
+  ];
+  currentRepertoire = '';
 
-  whiteRepertoire = [];
-  blackRepertoire = [];
+  repertoires = {}
   currentLine = '';
   currentMove = 0;
   allMovesCorrect = true;
@@ -31,8 +36,12 @@ class Repertoire {
     return this.turnColor === this.playerColor;
   }
 
+  get playerColor() {
+    return this.currentRepertoire.split('-')[0];
+  }
+
   get repertoire() {
-    return this.playerColor === 'white' ? this.whiteRepertoire : this.blackRepertoire;
+    return this.repertoires[this.currentRepertoire];
   }
 
   get movesOfCurrentLine() {
@@ -57,15 +66,17 @@ class Repertoire {
   }
 
   async init() {
-    [this.whiteRepertoire, this.blackRepertoire] = await Promise.all([
-      this.loadRepertoire('white'),
-      this.loadRepertoire('black')
-    ]);
+    await this.loadAllRepertoires();
     this.startLine();
   }
+
+  async loadAllRepertoires() {
+    const repertoires = await Promise.all(this.repertoireNames.map(name => this.loadRepertoire(name)));
+    this.repertoireNames.forEach((name, i) => this.repertoires[name] = repertoires[i]);
+  }
   
-  async loadRepertoire(color) {
-    const response = await axios.get(color + '.txt', {responseType: 'text'});
+  async loadRepertoire(name) {
+    const response = await axios.get(name + '.txt', {responseType: 'text'});
     const lines = response.data.split('\n').map(line => line.trim()).filter(line => !!line && !line.startsWith('#'));
     return lines;
   }
@@ -74,7 +85,7 @@ class Repertoire {
     this.game = new Chess();
 
     if (!this.currentLine || this.allMovesCorrect) {
-      this.playerColor = this.pickRandomPlayer();
+      this.currentRepertoire = this.pickRandomRepertoire();
       this.currentLine = this.pickRandomLine();
     }
     
@@ -91,8 +102,8 @@ class Repertoire {
     this.doNextMove();
   }
 
-  pickRandomPlayer() {
-    return ['white', 'black'][Math.round(Math.random())];
+  pickRandomRepertoire() {
+    return this.repertoireNames[Math.floor(this.repertoireNames.length * Math.random())];
   }
   
   pickRandomLine() {

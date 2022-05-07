@@ -1,1 +1,0 @@
-- Spaced Repetition Algorithmus einbauen (der auch mit Änderungen und hinzugefügten Varianten klarkommt)
