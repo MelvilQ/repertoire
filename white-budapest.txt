@@ -1,4 +1,4 @@
-# Budapester Gambit
+# Budapest Gambit
 1. d4 Nf6 2. c4 e5 3. dxe5 Ne4 4. a3
 1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nc3 Nxe5 5. Nf3 Nxc4 6. Qd5 Nb6 7. Qe5+ Qe7 8. Qxc7
 1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nc3 Nc6 5. e4 Ngxe5 6. f4

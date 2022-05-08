@@ -9,6 +9,9 @@
 </head>
 <body>
 <div id="highlight-color"><div class="blue cburnett"><div id="board" class="cg-wrap"></div></div></div>
+<div class="select-container">
+  <select id="repertoire"></select>
+</div>
 <script>
 
 class Repertoire {
@@ -17,11 +20,14 @@ class Repertoire {
 
   repertoireNames = [
     'white-ruy-lopez',
+    'white-stafford',
+    'white-budapest',
     // 'white-rossolimo',
     // 'white-ponziani',
     // 'black-london'
   ];
   currentRepertoire = '';
+  selectedRepertoire = '';
 
   repertoires = {}
   currentLine = '';
@@ -67,12 +73,20 @@ class Repertoire {
 
   async init() {
     await this.loadAllRepertoires();
+    this.initRepertoireSelect();
     this.startLine();
   }
 
   async loadAllRepertoires() {
     const repertoires = await Promise.all(this.repertoireNames.map(name => this.loadRepertoire(name)));
     this.repertoireNames.forEach((name, i) => this.repertoires[name] = repertoires[i]);
+    this.selectedRepertoire = this.repertoireNames[0];
+  }
+
+  initRepertoireSelect() {
+    const select = document.getElementById('repertoire');
+    this.repertoireNames.forEach(repertoire => select.appendChild(new Option(repertoire, repertoire)));
+    select.onchange = e => this.startLineFromRepertoire(e.target.value);
   }
   
   async loadRepertoire(name) {
@@ -81,11 +95,11 @@ class Repertoire {
     return lines;
   }
 
-  startLine() {
+  startLine(forceNew = false) {
     this.game = new Chess();
 
-    if (!this.currentLine || this.allMovesCorrect) {
-      this.currentRepertoire = this.pickRandomRepertoire();
+    if (forceNew || !this.currentLine || this.allMovesCorrect) {
+      this.currentRepertoire = this.selectedRepertoire;
       this.currentLine = this.pickRandomLine();
     }
     
@@ -102,8 +116,9 @@ class Repertoire {
     this.doNextMove();
   }
 
-  pickRandomRepertoire() {
-    return this.repertoireNames[Math.floor(this.repertoireNames.length * Math.random())];
+  startLineFromRepertoire(repertoire) {
+    this.selectedRepertoire = repertoire;
+    this.startLine(true);
   }
   
   pickRandomLine() {

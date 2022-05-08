@@ -5,6 +5,12 @@ body {
   font-size: 11px;
 }
 
+.select-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 section {
   background: #404040;
   padding: 10px 12px 10px 12px;
